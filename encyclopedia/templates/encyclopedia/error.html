@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html"%}
+
+{% block body %}
+<h1>error</h1>
+<h2>Only content of Entry</h2>
+<ul>
+{% for entry in entries%}
+<li>{{entry}}</li>
+{% endfor %}
+</ul>
+{% endblock %}

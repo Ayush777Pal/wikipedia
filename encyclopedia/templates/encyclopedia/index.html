@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center; font-size: 3.5rem; margin-bottom: 20px;">All Pages</h1>
+    <img src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png" style="float: right; margin-right: 100px; height:60vh; width: 60vh;">
+
+    <ul>
+        {% for entry in entries %}
+           <a href="{% url 'title' title=entry %}" style="text-decoration: none;"><li style="font-size: 2rem; display: block;">{{ entry }}</li></a>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
